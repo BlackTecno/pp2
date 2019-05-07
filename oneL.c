@@ -49,6 +49,8 @@ int main(int argc, char **argv) {
 		}
 	}
 
+	printf("Made Matrix\n");
+
 	start = get_seconds();
 
 	/* Timed matrix-multiplication */
