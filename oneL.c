@@ -38,8 +38,8 @@ int main(int argc, char **argv) {
 	//MAKE MATRIX
 	for (i = 0; i < size; i++) {
 		for (j = 0; j < size; j++) {
-			a[i][j] = std::fmod((float)rand(), 10000.0);
-			b[i][j] = std::fmod((float)rand(), 10000.0);
+			a[i][j] = (float)rand() / 40000.0;
+			b[i][j] = (float)rand() / 40000.0;
 		}
 	}
 
