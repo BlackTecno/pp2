@@ -84,6 +84,7 @@ void mult(int size, int *threads) {
 
 				#pragma omp for schedule(static)
 				for (k = 0; k < size; k++) {
+					printf("Here we are %d, %d, %d", i, j, k);
 					c[i][j] += a[i][k] * b[k][j];
 
 				}
