@@ -59,13 +59,13 @@ int main(int argc, char **argv) {
 void mult(int size, int *threads) {
 	int i, j, k;
 
-	for (i = 0; i < dim_size; i++) {
-		for (j = 0; j < dim_size; j++) {
+	for (i = 0; i < size; i++) {
+		for (j = 0; j < size; j++) {
 			c[i][j] = 0;
 
 			#pragma omp parallel shared(a, b, c, size) 
 				
-			*num_threads = omp_get_num_threads();
+			*threads = omp_get_num_threads();
 
 			#pragma omp for schedule(static)
 			for (k = 0; k < size; k++) {
