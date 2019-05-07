@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
 
 	while (check == 0) {
 		printf("Enter <size of Matrix> <Nuber of Threads>:");
-		scanf(" %d %d", size, threads);
+		scanf(" %d %d", &size, &threads);
 
 		printf("After input\n");
 
