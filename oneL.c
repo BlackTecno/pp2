@@ -53,8 +53,10 @@ int main(int argc, char **argv) {
 
 	start = get_seconds();
 
+	printf("Got seconds 1\n");
 	/* Timed matrix-multiplication */
 	mult(size, &threads);
+
 
 	/* Get end_time & calculate exec_time*/
 	end = get_seconds();
@@ -68,6 +70,7 @@ int main(int argc, char **argv) {
 void mult(int size, int *threads) {
 	int i, j, k;
 
+	printf("Start mult\n");
 	for (i = 0; i < size; i++) {
 		for (j = 0; j < size; j++) {
 			c[i][j] = 0;
