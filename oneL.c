@@ -22,8 +22,8 @@ int main(int argc, char **argv) {
 	double start, end, timeF;
 
 	while (check == 0) {
-		printf("Enter <size of Matrix> <Nuber of Threads>:");
-		scanf(" %d", &size);
+		printf("Enter <size of Matrix>:");
+		scanf("%d", &size);
 
 //		printf("After input\n");
 
