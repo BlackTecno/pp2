@@ -72,12 +72,11 @@ void mult(int size, int *threads) {
 
 	//	printf("Start mult\n");
 	#pragma omp parallel shared(a, b, c, size)
-	for (i = 0; i < size; i++) {
-
-		*threads = omp_get_num_threads();
-
+	{
 		#pragma omp for schedule(static)
-		{
+		for (i = 0; i < size; i++) {
+
+			*threads = omp_get_num_threads();
 
 			#pragma omp parallel for shared(a, b, c, size) schedule(static)			
 			for (j = 0; j < size; j++) {
@@ -91,7 +90,7 @@ void mult(int size, int *threads) {
 					c[i][j] += a[i][k] * b[k][j];
 
 				}
-			}
+			}			
 		}
 	}
 }
