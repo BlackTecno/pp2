@@ -8,13 +8,13 @@
 //MAX SIZE OF MATRIX
 #define MAX_SIZE 2000;
 
-mult(int size, int *threads);
+void mult(int size, int *threads);
 double get_seconds();
 
 //GLOBAL MATRIXIES (Matricies?)
-float a[MAX_SIZE][MAX_SIZE];
-float b[MAX_SIZE][MAX_SIZE];
-float c[MAX_SIZE][MAX_SIZE];
+volatile float a[MAX_SIZE][MAX_SIZE];
+volatile float b[MAX_SIZE][MAX_SIZE];
+volatile float c[MAX_SIZE][MAX_SIZE];
 
 
 int main(int argc, char **argv) {
