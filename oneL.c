@@ -56,7 +56,7 @@ int main(int argc, char **argv) {
 	return 0;
 }
 
-void mult(int size, int *threads) {
+void mult(int size, int * threads) {
 	int i, j, k;
 
 	for (i = 0; i < size; i++) {
@@ -65,7 +65,7 @@ void mult(int size, int *threads) {
 
 			#pragma omp parallel shared(a, b, c, size) 
 				
-			*threads = omp_get_threads();
+			*threads = omp_get_num_threads();
 
 			#pragma omp for schedule(static)
 			for (k = 0; k < size; k++) {
