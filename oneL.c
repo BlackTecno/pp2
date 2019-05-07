@@ -33,7 +33,7 @@ int main(int argc, char **argv) {
 
 	srand(time(NULL));
 
-	pinrtf("Got here\n");
+	printf("Got here\n");
 
 	//MAKE MATRIX
 	for (i = 0; i < size; i++) {
