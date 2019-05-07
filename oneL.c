@@ -6,7 +6,7 @@
 #include <unistd.h>
 
 //MAX SIZE OF MATRIX
-#define MAX_SIZE 2000
+#define MAX_SIZE 3000
 
 void mult(int size, int *threads);
 double get_seconds();
@@ -53,6 +53,8 @@ int main(int argc, char **argv) {
 	timeF = end - start;
 
 	printf("Threads %d took %f time.\n", threads, timeF * 1000);
+
+	return 0;
 }
 
 void mult(int size, int *threads) {
@@ -62,7 +64,7 @@ void mult(int size, int *threads) {
 			
 			c[i][j] = 0;
 
-			#pragma omp parallel for shared(a, b, c, size) {
+			#pragma omp parallel shared(a, b, c, size) {
 
 				*threads = omp_get_num_threads();
 
