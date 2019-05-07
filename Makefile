@@ -1,7 +1,7 @@
 CC=gcc
 SRCS= $(wildcard *.c)
 OBJS = $(SRCS:.c=.exe)
-LIBS = -lpthread
+LIBS = -fopenmp
 
 
 all:$(OBJS)
