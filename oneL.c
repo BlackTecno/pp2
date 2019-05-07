@@ -25,7 +25,7 @@ int main(int argc, char **argv) {
 		printf("Enter <size of Matrix> <Nuber of Threads>:");
 		scanf(" %d %d", &size, &threads);
 
-		printf("After input\n");
+//		printf("After input\n");
 
 		if (size > MAX_SIZE || size <= 0) 
 			printf("Incorrect size for matix, please input a number between 1 and %d\n", MAX_SIZE);
@@ -33,17 +33,17 @@ int main(int argc, char **argv) {
 			check = 1; 
 	}
 
-	printf("Before Time\n");
+//	printf("Before Time\n");
 
 	srand(time(NULL));
 
-	printf("Got here\n");
+//	printf("Got here\n");
 
 	//MAKE MATRIX
 	for (i = 0; i < size; i++) {
-		printf("Check %d\n", i);
+//		printf("Check %d\n", i);
 		for (j = 0; j < size; j++) {
-			printf("Check %d\n", j);
+//			printf("Check %d\n", j);
 			a[i][j] = (float)rand() / 40000.0;
 			b[i][j] = (float)rand() / 40000.0;
 		}
