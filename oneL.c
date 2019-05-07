@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
 
 	while (check == 0) {
 		printf("Enter <size of Matrix> <Nuber of Threads>:");
-		scanf(" %d %d", &size, &threads);
+		scanf(" %d", &size);
 
 //		printf("After input\n");
 
@@ -62,7 +62,7 @@ int main(int argc, char **argv) {
 	end = get_seconds();
 	timeF = end - start;
 
-	printf("Threads %d took %f time.\n", threads, timeF * 1000);
+	printf("Threads %d took %f time.\n", threads, timeF);
 
 	return 0;
 }
