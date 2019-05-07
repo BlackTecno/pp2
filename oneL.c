@@ -67,7 +67,7 @@ void mult(int size, int *threads) {
 
 				*threads = omp_get_num_threads();
 
-				#pragma omp for schhedule(static)
+				#pragma omp for schedule(static)
 				for (k = 0; k < size; k++) {
 					c[i][j] += a[i][k] * b[k][j];
 				}
