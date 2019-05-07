@@ -6,7 +6,7 @@
 #include <unistd.h>
 
 //MAX SIZE OF MATRIX
-#define MAX_SIZE 2000;
+#define MAX_SIZE 2000
 
 void mult(int size, int *threads);
 double get_seconds();
