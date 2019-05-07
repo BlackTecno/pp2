@@ -33,10 +33,13 @@ int main(int argc, char **argv) {
 
 	srand(time(NULL));
 
+	pinrtf("Got here\n");
 
 	//MAKE MATRIX
 	for (i = 0; i < size; i++) {
+		printf("Check %d\n", i);
 		for (j = 0; j < size; j++) {
+			printf("Check %d\n", j);
 			a[i][j] = (float)rand() / 40000.0;
 			b[i][j] = (float)rand() / 40000.0;
 		}
