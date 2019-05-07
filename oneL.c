@@ -50,7 +50,7 @@ int main(int argc, char **argv) {
 
 	/* Get end_time & calculate exec_time*/
 	end = get_seconds();
-	time = end - start;
+	timeF = end - start;
 
 	printf("Threads %d took %f time.\n", threads, timeF * 1000);
 }
