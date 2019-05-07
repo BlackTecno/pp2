@@ -4,6 +4,7 @@
 #include <sys/time.h>
 #include <time.h>
 #include <unistd.h>
+#include <cmath>
 
 //MAX SIZE OF MATRIX
 #define MAX_SIZE 3000
