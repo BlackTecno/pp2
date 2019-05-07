@@ -51,7 +51,9 @@ int main(int argc, char **argv) {
 	end = get_seconds();
 	timeF = end - start;
 
-	printf("Threads %d took %f time.\n", threads, timeF * 1000);
+	timeF = timeF * 1000;
+
+	printf("Threads %d took %f time.\n", threads, timeF);
 
 	return 0;
 }
