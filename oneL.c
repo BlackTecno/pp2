@@ -22,8 +22,8 @@ int main(int argc, char **argv) {
 	double start, end, timeF;
 
 	while (check == 0) {
-		printf("Enter <size of Matrix>, <Nuber of Threads>:");
-		scanf(" %d, %d", size, threads);
+		printf("Enter <size of Matrix> <Nuber of Threads>:");
+		scanf(" %d %d", size, threads);
 
 		if (size > MAX_SIZE || size <= 0) 
 			printf("Incorrect size for matix, please input a number between 1 and %d\n", MAX_SIZE);
