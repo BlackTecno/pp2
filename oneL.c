@@ -70,11 +70,11 @@ int main(int argc, char **argv) {
 void mult(int size, int *threads) {
 	int i, j, k;
 
-	printf("Start mult\n");
+//	printf("Start mult\n");
 	for (i = 0; i < size; i++) {
-		printf("Loop 1\n");
+//		printf("Loop 1\n");
 		for (j = 0; j < size; j++) {
-			printf("Loop 2\n");
+//			printf("Loop 2\n");
 			c[i][j] = 0;
 
 			#pragma omp parallel shared(a, b, c, size) 
@@ -84,7 +84,7 @@ void mult(int size, int *threads) {
 
 				#pragma omp for schedule(static)
 				for (k = 0; k < size; k++) {
-					printf("Here we are %d, %d, %d\n", i, j, k);
+//					printf("Here we are %d, %d, %d\n", i, j, k);
 					c[i][j] += a[i][k] * b[k][j];
 
 				}
