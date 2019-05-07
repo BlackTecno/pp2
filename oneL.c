@@ -19,7 +19,7 @@ volatile float c[MAX_SIZE][MAX_SIZE];
 
 int main(int argc, char **argv) {
 	int size, threads, i, j, check = 0;
-	double start, end, time;
+	double start, end, timeF;
 
 	while (check == 0) {
 		printf("Enter <size of Matrix>, <Nuber of Threads>:");
@@ -51,6 +51,8 @@ int main(int argc, char **argv) {
 	/* Get end_time & calculate exec_time*/
 	end = get_seconds();
 	time = end - start;
+
+	printf("Threads %d took %f time.\n", threads, timeF * 1000);
 }
 
 void mult(int size, int *threads) {
