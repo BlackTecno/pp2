@@ -85,7 +85,7 @@ void mult(int size, int *threads) {
 
 				#pragma omp parallel for shared(a, b, c, size) schedule(static)	
 				for (k = 0; k < size; k++) {
-					printf("Here we are %d, %d, %d\n", i, j, k);
+//					printf("Here we are %d, %d, %d\n", i, j, k);			//For testing purposes
 					c[i][j] += a[i][k] * b[k][j];
 
 				}
