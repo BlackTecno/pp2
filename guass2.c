@@ -14,14 +14,6 @@
 int N;  /* Matrix size */
 int procs;  /* Number of processors to use */
 
-//	HOLDING VARIABLES TO MAKE EQUATIONS EASIER
-typedef struct {
-	int norm;
-	int id;
-	int tRow;
-	int off;
-}threadstr;
-
 /* Matrices and vectors */
 volatile float A[MAXN][MAXN], B[MAXN], X[MAXN];
 /* A * X = B, solve for X */
@@ -206,7 +198,7 @@ void gauss() {
 	int norm, row, col;
 	float mult;
 
-	#pragma omp parallel default(none) private(norm, row, col, multiplier) shared(A, B, threads, N) num_threads(threads)
+	#pragma omp parallel default(none) private(norm, row, col, mult) shared(A, B, procs, N) num_threads(procs)
 	{
 		#pragma omp for schedule(static)
 		for (row = norm + 1; row < N; row++) {
